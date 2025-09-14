@@ -17,6 +17,6 @@ jobs:
         env: # Set the secret as an input
           token_hf: ${{ secrets.HF_TOKEN }}
         run: |
-          hf auth login --token=token_hf
+          hf auth login --token=token_hf --add-to-git-credential
       - name: test
         run: make test
